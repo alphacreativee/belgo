@@ -1,4 +1,6 @@
 @import "./variable";
 @import "./reset";
 @import "./header";
-@import "./global"; // sass ./assets/sass/style.scss ./assets/styles/style.css --watch
+@import "./global";
+@import "./process";
+// sass ./assets/sass/style.scss ./assets/styles/style.css --watch

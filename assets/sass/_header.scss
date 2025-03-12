@@ -9,6 +9,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     padding: 16px 80px;
     border-bottom: 1px solid #e4ddce66;
+    backdrop-filter: blur(10px);
   }
   &__logo {
     a {
