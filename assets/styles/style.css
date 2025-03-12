@@ -189,6 +189,12 @@ body {
 .process__wrapper .circle-svg .progress-path {
   opacity: 0;
 }
+.process__wrapper .shadow-both {
+  position: absolute;
+  bottom: -110px;
+  transform: translateX(-65px);
+  left: 50%;
+}
 .process__container {
   display: flex;
   justify-content: center;

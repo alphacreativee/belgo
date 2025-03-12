@@ -30,6 +30,12 @@
         opacity: 0;
       }
     }
+    .shadow-both {
+      position: absolute;
+      bottom: -110px;
+      transform: translateX(-65px);
+      left: 50%;
+    }
   }
   &__container {
     display: flex;
