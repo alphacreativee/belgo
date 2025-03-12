@@ -28,7 +28,34 @@
   </head>
   <body>
     <!-- layout -->
-    <header></header>
+    <header class="header">
+      <div class="container-fluid p-0">
+        <div class="header__container">
+          <div
+            class="header__menu b2-font color-white d-flex align-items-center justify-content-start"
+          >
+            Menu
+          </div>
+          <div
+            class="header__logo d-flex justify-content-center align-items-center"
+          >
+            <a href="">
+              <img srcset="./assets/images/use/logo.png" alt="" />
+            </a>
+          </div>
+          <div
+            class="header__cta d-flex align-items-center justify-content-end"
+          >
+            <a
+              href=""
+              class="button-primary tag-font color-primary text-uppercase"
+            >
+              Order now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
     <!-- end layout -->
@@ -42,7 +69,8 @@
     <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
 
     <!-- import custom js -->
-    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
     <!-- end import custom js -->
   </body>
 </html>
+<!-- https://gsap.com/community/forums/topic/30338-circular-carouselslider/ -->
