@@ -30,10 +30,17 @@ function drawCircles() {
       const angleDeg = startAngle + index * angleStep;
       const dataIndex = parseInt(item.getAttribute("data-index")) || index;
       let radius = radiusDefault; // Giá trị mặc định
-      if (dataIndex === 2) {
-        radius = 290;
-      } else if (dataIndex === 6) {
-        radius = 270;
+      switch (dataIndex) {
+        case 2:
+          radius = 290;
+          break;
+        case 3:
+          radius = 260;
+          break;
+        case 5:
+        case 6:
+          radius = 270;
+          break;
       }
       console.log(`Item ${index}: angle = ${angleDeg}deg`);
 
