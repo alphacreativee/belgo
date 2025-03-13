@@ -74,7 +74,7 @@ function drawCircles() {
 
           setTimeout(() => {
             item.style.opacity = "1";
-            item.style.transition = "opacity 0.5s ease";
+            item.style.transition = "opacity 0.3s ease";
 
             const progress = (index + 1) / totalItems;
             const offset = circumference * (1 - progress);
