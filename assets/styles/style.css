@@ -3,6 +3,7 @@
   --color-primary: #1e1e1e;
   --color-black: #000000;
   --color-secondary: #e4ddce;
+  --color-text: #e5dccb;
 }
 
 .h2-font {
@@ -45,6 +46,10 @@
 
 .color-primary {
   color: #1e1e1e;
+}
+
+.color-text {
+  color: var(--color-text);
 }
 
 *,
@@ -116,6 +121,7 @@ body {
   -webkit-font-smoothing: auto !important;
   -moz-osx-font-smoothing: grayscale !important;
   background-color: var(--color-black);
+  font-family: var(--font-primary);
 }
 
 .header {
@@ -166,17 +172,6 @@ body {
   border-radius: 50%;
   position: relative;
 }
-.process__wrapper::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background-color: rgba(185, 106, 7, 0.4);
-  filter: blur(500px);
-}
 .process__wrapper .circle-svg {
   position: absolute;
   top: 0;
@@ -189,11 +184,10 @@ body {
 .process__wrapper .circle-svg .progress-path {
   opacity: 0;
 }
-.process__wrapper .shadow-both {
-  position: absolute;
-  bottom: -110px;
-  transform: translateX(-65px);
-  left: 50%;
+.process__back {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
 }
 .process__container {
   display: flex;
@@ -201,6 +195,24 @@ body {
   align-items: center;
   height: 100%;
   position: relative;
+}
+.process__container .shadow-both {
+  position: absolute;
+  bottom: -14px;
+  transform: translateX(-65px);
+  left: 50%;
+  z-index: 2;
+}
+.process__container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: rgba(185, 106, 7, 0.4);
+  filter: blur(500px);
 }
 .process__front {
   position: absolute;
@@ -210,6 +222,32 @@ body {
   width: 594px;
   aspect-ratio: 1;
   z-index: 2;
+}
+.process__front img:hover {
+  cursor: pointer;
+}
+.process__front--content {
+  position: absolute;
+  max-width: 325px;
+  width: 100%;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.process__front--content.none-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.process__front--content h4 {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+.process__front--content h3 {
+  margin-bottom: 24px;
 }
 .process__item {
   position: absolute;

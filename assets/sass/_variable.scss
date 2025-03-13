@@ -5,6 +5,7 @@
   --color-primary: #1e1e1e;
   --color-black: #000000;
   --color-secondary: #e4ddce;
+  --color-text: #e5dccb;
 
   // other
 }
@@ -42,4 +43,7 @@
 }
 .color-primary {
   color: #1e1e1e;
+}
+.color-text {
+  color: var(--color-text);
 }
