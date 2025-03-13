@@ -354,7 +354,7 @@ body {
 .experience__image--box:hover .experience__image--default {
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 .experience__image--box:hover .experience__image--hover {
   opacity: 1;
@@ -388,13 +388,16 @@ body {
 }
 .experience__image--default {
   height: 100%;
+  transition: all 0.4s ease;
+  opacity: 1;
+  visibility: visible;
 }
 .experience__image--hover {
   position: absolute;
   top: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
 .experience__image--hover .img {
   margin-bottom: 24px;
