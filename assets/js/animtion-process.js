@@ -102,5 +102,24 @@ function drawCircles() {
     });
   });
 }
-
+function hoverImgChangeCursor() {
+  const imgWrapper = document.querySelector(".process__front .both");
+  let processFrontImg = document.querySelector(".process__front");
+  const button = imgWrapper.querySelector(".button-discover");
+  imgWrapper.addEventListener("mousemove", (e) => {
+    const rect = imgWrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    console.log(x, y);
+    imgWrapper.style.setProperty("--circle-x", `${x - 40}px`);
+    imgWrapper.style.setProperty("--circle-y", `${y - 40}px`);
+  });
+  processFrontImg.addEventListener("click", () => {
+    button.classList.add("zoom");
+    setTimeout(() => {
+      button.classList.remove("zoom");
+    }, 400);
+  });
+}
+hoverImgChangeCursor();
 drawCircles();
