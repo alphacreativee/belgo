@@ -39,10 +39,10 @@
   color: #ffffff;
 }
 .color-black {
-  color: #000000;
+  color: var(--color-black);
 }
 .color-primary {
-  color: #1e1e1e;
+  color: var(--color-primary);
 }
 .color-text {
   color: var(--color-text);
