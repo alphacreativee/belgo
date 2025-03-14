@@ -3,6 +3,7 @@
   --color-primary: #1e1e1e;
   --color-black: #000000;
   --color-secondary: #e4ddce;
+  --color-third: #e3dccd;
 }
 
 .h2-font {
@@ -96,6 +97,7 @@ ul,
 ol {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -140,6 +142,10 @@ body {
 .header__logo a img {
   width: 100%;
   height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
 }
 
 .button-primary {
@@ -219,6 +225,124 @@ body {
 }
 .process__item img {
   object-position: right;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+footer.done .footer-top {
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+footer.done .footer-social {
+  opacity: 1;
+  visibility: visible;
+}
+footer .footer-top {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-black);
+  transition: all 0.4s ease;
+}
+footer .footer-top .title {
+  text-align: center;
+  margin: auto;
+  font-size: 48px;
+  line-height: 100%;
+  color: var(--color-third);
+  padding: 0 24px;
+}
+footer .footer-bottom {
+  padding: 40px 80px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+footer .footer-bottom__logo {
+  width: 180px;
+  height: 140px;
+  margin: 0 auto;
+}
+footer .footer-bottom__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .footer-bottom__main {
+  margin-top: 55px;
+}
+footer .footer-bottom__main .footer-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+}
+footer .footer-bottom__main .footer-menu-item {
+  color: var(--color-third);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+footer .footer-bottom__main .footer-menu ul {
+  font-weight: 300;
+  max-width: 70%;
+}
+footer .footer-bottom__main .footer-menu a {
+  color: var(--color-third);
+}
+footer .footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: 40px;
+  bottom: 80px;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+footer .footer-social .title {
+  font-size: 16px;
+  font-weight: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+footer .footer-social .list-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 12px;
+}
+footer .footer-social .copyright {
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 300;
+  margin-top: 60px;
+}
+footer .footer-ovl {
+  background-color: var(--color-third);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: skewY(-30deg) translateY(-150%);
 }
 
 /*# sourceMappingURL=style.css.map */
