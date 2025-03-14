@@ -14,7 +14,42 @@ function ourProduct() {
     },
   });
 }
+function textAnimation() {
+  const fxText = [
+    ...document.querySelectorAll(
+      ".animation-text[data-splitting][data-text-effect]"
+    ),
+  ];
+  fxText.forEach((title) => {
+    const chars = title.querySelectorAll(".char");
 
+    chars.forEach((char) => gsap.set(char.parentNode, { perspective: 1000 }));
+
+    gsap.fromTo(
+      chars,
+      {
+        scaleY: 0.1,
+        scaleX: 1.8,
+        filter: "blur(10px) brightness(50%)",
+        willChange: "filter, transform",
+      },
+      {
+        ease: "none",
+        scaleY: 1,
+        scaleX: 1,
+        filter: "blur(0px) brightness(100%)",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: title,
+          start: "center bottom",
+          end: "bottom top+=50%",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  });
+}
 function footer() {
   const footerElement = document.querySelector("footer");
   const footerTop = document.querySelector(".footer-top");
@@ -75,3 +110,4 @@ preloadImages("img").then(() => {
 $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
 });
+textAnimation();

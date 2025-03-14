@@ -9,6 +9,18 @@
   .swiper-wrapper {
     background-color: var(--color-third);
   }
+  .swiper-our-product {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-black);
+      z-index: 2;
+    }
+  }
   .swiper-pagination {
     top: unset;
     bottom: 56px;
