@@ -74,18 +74,18 @@ function drawCircles() {
 
           setTimeout(() => {
             item.style.opacity = "1";
-            item.style.transition = "opacity 0.3s ease";
+            item.style.transition = "opacity 0.2s ease";
 
             const progress = (index + 1) / totalItems;
             const offset = circumference * (1 - progress);
-            circle.style.transition = "stroke-dashoffset 1.2s ease";
+            circle.style.transition = "stroke-dashoffset 0.8s ease";
             circle.style.strokeDashoffset = offset;
 
             paths.forEach((path) => {
               const pathIndex = parseInt(path.getAttribute("data-index"));
               if (pathIndex === dataIndex) {
                 path.style.opacity = "1";
-                path.style.transition = "stroke-dashoffset 1s ease";
+                path.style.transition = "stroke-dashoffset 0.8s ease";
                 path.style.strokeDashoffset = "0";
               }
             });
@@ -106,6 +106,11 @@ function hoverImgChangeCursor() {
   const imgWrapper = document.querySelector(".process__front .both");
   let processFrontImg = document.querySelector(".process__front");
   const button = imgWrapper.querySelector(".button-discover");
+
+  // Set initial text explicitly
+  button.textContent = "discover";
+  let isDiscover = true; // Track the current state
+
   imgWrapper.addEventListener("mousemove", (e) => {
     const rect = imgWrapper.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -114,8 +119,19 @@ function hoverImgChangeCursor() {
     imgWrapper.style.setProperty("--circle-x", `${x - 40}px`);
     imgWrapper.style.setProperty("--circle-y", `${y - 40}px`);
   });
+
   processFrontImg.addEventListener("click", () => {
     button.classList.add("zoom");
+
+    // Toggle text using boolean state
+    if (isDiscover) {
+      button.textContent = "close";
+      isDiscover = false;
+    } else {
+      button.textContent = "discover";
+      isDiscover = true;
+    }
+
     setTimeout(() => {
       button.classList.remove("zoom");
     }, 400);
