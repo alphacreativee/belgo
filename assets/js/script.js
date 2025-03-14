@@ -30,7 +30,7 @@ function footer() {
   gsap.fromTo(
     footerOvl,
     {
-      transform: "skewY(-30deg) translateY(-150%)"
+      transform: "skewY(-30deg) translateY(-180%)"
     },
     {
       transform: "skewY(-30deg) translateY(100%)",
