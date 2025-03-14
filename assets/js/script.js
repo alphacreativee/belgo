@@ -8,6 +8,10 @@ function ourProduct() {
   var swiperProduct = new Swiper(".swiper-our-product", {
     slidesPerView: "auto",
     speed: 600,
+    pagination: {
+      el: ".swiper-our-product .swiper-pagination",
+      type: "progressbar",
+    },
   });
 }
 

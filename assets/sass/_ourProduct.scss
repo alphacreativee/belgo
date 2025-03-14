@@ -6,8 +6,17 @@
     background-color: var(--color-third);
     height: 100vh;
   }
-  .swiperw-wrapper {
+  .swiper-wrapper {
     background-color: var(--color-third);
+  }
+  .swiper-pagination {
+    top: unset;
+    bottom: 56px;
+    background-color: #92929233;
+    height: 2px;
+    .swiper-pagination-progressbar-fill {
+      background-color: #e9e9e9;
+    }
   }
   .swiper-slide {
     height: 100%;
@@ -16,10 +25,10 @@
     border: none;
     will-change: transform;
     &:first-child {
-      width: 80%;
+      width: 83%;
     }
     &:not(:first-child) {
-      width: 40%;
+      width: 35%;
       .our-product__item--box {
         padding-bottom: 64px;
       }
@@ -53,12 +62,34 @@
           p {
             font-weight: 700;
             margin-bottom: 8px;
+            .char {
+              display: inline-block;
+              clip-path: inset(100% 0% 0% 0%);
+              transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            }
           }
           h3 {
             color: var(--clr-text);
+            .char {
+              display: inline-block;
+              clip-path: inset(100% 0% 0% 0%);
+              transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            }
           }
         }
         &:hover {
+          .beer-title {
+            p {
+              .char {
+                clip-path: inset(0% 0% 0% 0%);
+              }
+            }
+            h3 {
+              .char {
+                clip-path: inset(0% 0% 0% 0%);
+              }
+            }
+          }
           cursor: pointer;
           img {
             &:nth-child(1) {
@@ -67,7 +98,7 @@
             &:nth-child(2) {
               opacity: 1;
               visibility: visible;
-              transform: translate(-30%, -50%);
+              transform: translate(-35%, -50%);
             }
             &:nth-child(3) {
               transform: translate(-50%, -50%) scale(0.7);
