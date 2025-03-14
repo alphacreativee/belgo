@@ -32,14 +32,14 @@ function footer() {
         } else {
           footerElement.classList.remove("done");
         }
-      }
-    }
+      },
+    },
   });
 
   gsap.fromTo(
     footerOvl,
     {
-      transform: "skewY(-30deg) translateY(-180%)"
+      transform: "skewY(-30deg) translateY(-180%)",
     },
     {
       transform: "skewY(-30deg) translateY(100%)",
@@ -47,10 +47,10 @@ function footer() {
         trigger: "footer",
         start: "top top",
         end: () => `+=${footerTopHeight * 2}`,
-        scrub: 1
+        scrub: 1,
         // markers: { startColor: "green", endColor: "red" }
       },
-      ease: "none"
+      ease: "none",
     }
   );
 
