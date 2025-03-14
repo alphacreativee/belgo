@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belgo</title>
     <!-- import favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/logo_shorten.svg"
-    />
+    <link rel="icon" type="image/x-icon" />
     <!-- meta -->
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
@@ -20,6 +16,7 @@
     <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/libs/splitting.min.css" />
     <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
     <!-- end meta -->
     <!-- link custom css page -->
     <link rel="stylesheet" href="./assets/font/Helvetica/stylesheet.css" />
@@ -292,6 +289,64 @@
           </div>
         </div>
       </section>
+      <section class="our-product">
+        <div class="container-fluid p-0">
+          <div class="our-product__container">
+            <div class="swiper swiper-our-product">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="our-product__item">
+                    <div class="our-product__item--box">
+                      <video autoplay loop>
+                        <source
+                          src="./assets/images/use/belgo.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                      <div class="our-product__item--content">
+                        <p class="tag-font color-text text-uppercase">
+                          Our Products
+                        </p>
+                        <h2 class="h2-font color-text text-uppercase">
+                          Don't stop now – <br />There's more flavor <br />
+                          to discover!
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-product__item">
+                    <div class="our-product__item--box">
+                      <div class="img">
+                        <img src="./assets/images/use/belgo_1.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-product__item">
+                    <div class="our-product__item--box">
+                      <div class="img">
+                        <img src="./assets/images/use/belgo_2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-product__item">
+                    <div class="our-product__item--box">
+                      <div class="img">
+                        <img src="./assets/images/use/belgo_3.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <!-- end layout -->
@@ -303,7 +358,7 @@
     <script src="./assets/libs/splitting.min.js"></script>
     <script src="./assets/libs/bootstrap.bundle.min.js"></script>
     <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
-
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
     <!-- import custom js -->
     <script type="module" src="./assets/js/script.js"></script>
     <script src="./assets/js/animtion-process.js"></script>

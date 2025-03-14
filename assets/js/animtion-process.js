@@ -115,7 +115,7 @@ function hoverImgChangeCursor() {
     const rect = imgWrapper.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    console.log(x, y);
+    // console.log(x, y);
     imgWrapper.style.setProperty("--circle-x", `${x - 40}px`);
     imgWrapper.style.setProperty("--circle-y", `${y - 40}px`);
   });

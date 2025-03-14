@@ -1,0 +1,49 @@
+.our-product {
+  &__container {
+    width: 100%;
+    height: 100vh;
+  }
+  .swiper-slide {
+    height: 100%;
+    &:first-child {
+      width: 80%;
+    }
+    &:not(:first-child) {
+      width: 50%;
+    }
+  }
+  &__item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #e3dccd;
+    &--box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .img {
+        width: 450px;
+        aspect-ratio: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--content {
+      position: absolute;
+      left: 80px;
+      bottom: 140px;
+      p {
+        font-weight: 400;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -420,4 +420,52 @@ body {
   z-index: 4;
 }
 
+.our-product__container {
+  width: 100%;
+  height: 100vh;
+}
+.our-product .swiper-slide {
+  height: 100%;
+}
+.our-product .swiper-slide:first-child {
+  width: 80%;
+}
+.our-product .swiper-slide:not(:first-child) {
+  width: 50%;
+}
+.our-product__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #e3dccd;
+}
+.our-product__item--box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.our-product__item--box .img {
+  width: 450px;
+  aspect-ratio: 1;
+}
+.our-product__item--box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.our-product__item--box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.our-product__item--content {
+  position: absolute;
+  left: 80px;
+  bottom: 140px;
+}
+.our-product__item--content p {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
 /*# sourceMappingURL=style.css.map */
