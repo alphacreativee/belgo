@@ -417,24 +417,101 @@ body {
   left: 1px;
   right: 1px;
   bottom: 0;
-  background: linear-gradient(
-      180.03deg,
-      rgba(0, 0, 0, 0) 26.09%,
-      rgba(0, 0, 0, 0.6) 89.81%,
-      rgba(0, 0, 0, 0) 110.88%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 56.23%,
-      rgba(0, 0, 0, 0.4) 84.95%,
-      rgba(0, 0, 0, 0) 110.91%
-    );
+  background: linear-gradient(180.03deg, rgba(0, 0, 0, 0) 26.09%, rgba(0, 0, 0, 0.6) 89.81%, rgba(0, 0, 0, 0) 110.88%), linear-gradient(180deg, rgba(0, 0, 0, 0) 56.23%, rgba(0, 0, 0, 0.4) 84.95%, rgba(0, 0, 0, 0) 110.91%);
 }
 .experience__image--hover .experience__image--wrapper p {
   width: calc(100% - 64px);
   text-align: center;
   bottom: 24px;
   z-index: 4;
+}
+
+.section-specs {
+  background-color: var(--color-secondary);
+  overflow: hidden;
+}
+.section-specs .img-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(15%);
+  max-height: 600px;
+}
+.section-specs .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.section-specs .content-right .list-item {
+  margin-top: 60px;
+  max-width: 80%;
+}
+.section-specs .content-right .list-item li {
+  margin-bottom: 24px;
+}
+.section-specs .content-right .list-item span {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(146, 146, 146, 0.2);
+}
+.section-specs .content-right .list-item .number {
+  font-size: 56px;
+  line-height: 64px;
+  color: #1e1e1e;
+  font-weight: 700;
+  width: 40%;
+  min-width: 40%;
+}
+.section-specs .content-right .list-item .desc {
+  width: 60%;
+}
+.section-specs .content-right .list-item sub {
+  bottom: 0.3em;
+}
+.section-specs .content-right .list-item .item-content {
+  display: flex;
+  gap: 24px;
+}
+
+.section-info {
+  padding: 160px 0;
+  background-color: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+}
+.section-info .bg-section-info {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+  width: 300px;
+  height: 90%;
+}
+.section-info .bg-section-info::after {
+  content: "";
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(228, 221, 206, 0) 0%, #e4ddce 92.08%);
+}
+.section-info .bg-section-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-info .logo {
+  width: 172px;
+  height: auto;
+  margin: 0 auto;
+}
+.section-info .wrapper-content .title {
+  margin-top: 40px;
+}
+.section-info .wrapper-content .desc {
+  margin-top: 24px;
 }
 
 .our-product {
@@ -590,71 +667,6 @@ body {
 .our-product__item--content p {
   font-weight: 400;
   margin-bottom: 40px;
-}
-
-.section-specs {
-  background-color: var(--color-secondary);
-  overflow: hidden;
-}
-.section-specs .img-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  transform: translateY(15%);
-  max-height: 600px;
-}
-.section-specs .img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-.section-specs .content-right .list-item {
-  margin-top: 60px;
-  max-width: 80%;
-}
-.section-specs .content-right .list-item li {
-  margin-bottom: 24px;
-}
-.section-specs .content-right .list-item span {
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid rgba(146, 146, 146, 0.2);
-}
-.section-specs .content-right .list-item .number {
-  font-size: 56px;
-  line-height: 64px;
-  color: #1e1e1e;
-  font-weight: 700;
-  width: 40%;
-  min-width: 40%;
-}
-.section-specs .content-right .list-item .desc {
-  width: 60%;
-}
-.section-specs .content-right .list-item sub {
-  bottom: 0.3em;
-}
-.section-specs .content-right .list-item .item-content {
-  display: flex;
-  gap: 24px;
-}
-
-.section-info {
-  padding: 160px 0;
-  background-color: var(--color-secondary);
-}
-.section-info .logo {
-  width: 172px;
-  height: auto;
-  margin: 0 auto;
-}
-.section-info .wrapper-content .title {
-  margin-top: 40px;
-}
-.section-info .wrapper-content .desc {
-  margin-top: 24px;
 }
 
 footer {
